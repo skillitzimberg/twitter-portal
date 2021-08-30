@@ -1,8 +1,19 @@
 # PLANNING
 
-## Wireframe
+## Wireframes
 
-![](./twitter_wireframe.jpg)
+### HOME VIEW
+
+![](./twitter_home.jpg)
+
+### SEARCH VIEW
+
+The vertical card carousel that changes the card size depending on its position in the parent may be a stretch goal.
+![](./twitter_search.jpg)
+
+### RANDOM VIEW
+
+![](./twitter_random.jpg)
 
 ## Test Cases
 
@@ -19,7 +30,7 @@
 
 ### API
 
-### Styling
+### STYLING
 
 ### TEST CASE PSEUDO CODE
 
@@ -27,7 +38,12 @@
    - Something to do to make the expectation happen
    - Something else to do to make the expectation happen
 
-## Things I Did NOT Plan For Or Know About
+## Known unknowns
+
+- How to make a vertical card carousel
+- Routing in React
+
+## Unknown unknowns
 
 ## TODO
 
