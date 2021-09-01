@@ -3,10 +3,10 @@ import Header from "./Header";
 
 const Layout = (props) => {
   return (
-    <div>
+    <main id="layout">
       <Header />
       {props.children}
-    </div>
+    </main>
   );
 };
 export default Layout;

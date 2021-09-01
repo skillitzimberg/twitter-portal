@@ -26,18 +26,19 @@ The vertical card carousel that changes the card size depending on its position 
 
 - HEADER
 
-  - Create a Header component that imports a Nav component
-  - Add Logo image or element
+  - √ Create a Header component that imports a Nav component
+  - √ Add Logo image or element
 
 - NAVIGATION
-  - Create a Nav component
-  - Links to:
+  - √ Create a Nav component
+  - √ Links to:
     - Home
     - Search
     - Random
-  - Add Logo linking to Home
+  - √ Add Logo linking to Home
 - HOME
   - Create a Home component with static content
+    - Photo by <a href="https://unsplash.com/@the_real_napster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dominik Lange</a> on <a href="https://unsplash.com/s/photos/bird?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 - SEARCH
   - Create a Search component with static content
   - Create Tweet cards with mock response data
@@ -137,6 +138,9 @@ The vertical card carousel that changes the card size depending on its position 
 
 ## Googled
 
-- `search term used`:
-  - result consumed;
-  - another result consumed;
+- `css background image full screen`:
+
+  - https://css-tricks.com/perfect-full-page-background-image/;
+
+- `react img src`:
+  - https://stackoverflow.com/a/39999421/3530078;

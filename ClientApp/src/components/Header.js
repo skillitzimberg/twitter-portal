@@ -1,10 +1,10 @@
 import React from "react";
-import { Nav, Navbar, NavDropdown, Container } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 
 const Header = () => {
   return (
     <header>
-      <Navbar bg="light" expand="lg">
+      <Navbar variant="dark" bg="dark" expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
