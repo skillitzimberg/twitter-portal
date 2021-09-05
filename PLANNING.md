@@ -55,6 +55,10 @@ The vertical card carousel that changes the card size depending on its position 
 ### INTERNAL API
 
 - SEARCH
+  - Create mock data file representing search results
+  - Create a Model representing Tweet data
+  - Set up controller to GET search results
+  -
 - RANDOM
 
 ### TWITTER API
@@ -136,6 +140,14 @@ The vertical card carousel that changes the card size depending on its position 
 
 ## TODO
 
+Get user by username:
+
+- (simple) https://api.twitter.com/2/users/by/username/:username
+- (more data) https://api.twitter.com/2/users/by/username/:username?user.fields=created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,url,username,verified,withheld&expansions=pinned_tweet_id&tweet.fields=attachments,author_id,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,referenced_tweets,source,text,withheld
+  Get tweets by userId:
+
+- https://api.twitter.com/2/users/:id/tweets;
+
 ## Googled
 
 - `css background image full screen`:
@@ -143,4 +155,42 @@ The vertical card carousel that changes the card size depending on its position 
   - https://css-tricks.com/perfect-full-page-background-image/;
 
 - `react img src`:
+
   - https://stackoverflow.com/a/39999421/3530078;
+
+- `.NET controller pattern {action=Index}`:
+
+  - https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/routing?view=aspnetcore-5.0;
+  - https://learning.postman.com/docs/sending-requests/intro-to-collections/;
+
+- `postman collection`:
+
+  - https://thinkster.io/tutorials/testing-backend-apis-with-postman/using-collections-in-postman;
+  - https://learning.postman.com/docs/sending-requests/intro-to-collections/;
+
+- `twitter search tweets by user`:
+
+  - https://developer.twitter.com/en/docs/twitter-api/v1/tweets/search/overview;
+  - https://developer.twitter.com/en/docs/twitter-api/tweets/search/introduction;
+  - https://developer.twitter.com/en/portal/products;
+  - https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/introduction;
+  - https://developer.twitter.com/en/docs/twitter-api/tweets/timelines/quick-start;
+
+- `transient vs singleton`:
+
+  - https://stackoverflow.com/questions/38138100/addtransient-addscoped-and-addsingleton-services-differences;
+
+- `c# .NET using()`:
+
+  - https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement;
+  - https://docs.microsoft.com/en-us/dotnet/api/system.idisposable?view=net-5.0;
+
+- `.NET WebHostEnvironment.ContentRootPath`:
+
+  - https://mariusschulz.com/blog/getting-the-web-root-path-and-the-content-root-path-in-asp-net-core;
+
+- `twitter api expansions`:
+  - https://developer.twitter.com/en/docs/twitter-api/expansions;
+  - https://developer.twitter.com/en/docs/labs/expansions;
+  - https://developer.twitter.com/en/docs/twitter-api/fields;
+  - https://developer.twitter.com/en/docs/labs/fields;
