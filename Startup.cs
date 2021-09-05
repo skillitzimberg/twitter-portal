@@ -21,7 +21,7 @@ namespace TwitterApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddTransient<JsonTweetsService>();
+            services.AddTransient<TwitterService>();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

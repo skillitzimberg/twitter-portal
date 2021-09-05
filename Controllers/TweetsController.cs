@@ -8,24 +8,24 @@ namespace TwitterApp.Controllers
 
     public class TweetsController : ControllerBase
     {
-        public TweetsController(JsonTweetsService tweetsService)
+        public TweetsController(TwitterService twitterService)
         {
-            this.TweetsService = tweetsService;
+            this.TwitterService = twitterService;
         }
-        public JsonTweetsService TweetsService { get;  }
+        public TwitterService TwitterService { get;  }
 
-        [Route("[controller]")]
+        [Route("api/[controller]")]
         [HttpGet]
         public TwitterUser Get()
         {
-            return TweetsService.GetUser();
+            return TwitterService.GetUser();
         }
 
-        [Route("[controller]/{id}")]
+        [Route("api/[controller]/{id}")]
         [HttpGet]
         public Tweet Get(string id)
         {
-            return TweetsService.GetTweet(id);
+            return TwitterService.GetTweet(id);
         }
 
     }

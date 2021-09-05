@@ -6,10 +6,10 @@ using TwitterApp.Models;
 
 namespace TwitterApp.Services
 {
-    public class JsonTweetsService
+    public class TwitterService
     {
         public IWebHostEnvironment WebHostEnvironment { get; }
-        public JsonTweetsService(IWebHostEnvironment webHostEnvironment)
+        public TwitterService(IWebHostEnvironment webHostEnvironment)
         {
             this.WebHostEnvironment = webHostEnvironment;
         }
