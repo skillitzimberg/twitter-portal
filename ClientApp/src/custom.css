@@ -39,3 +39,44 @@ header {
 p.home-card {
   width: 70%;
 }
+.tweet-card {
+  width: 50%;
+  margin: 0 auto 1.5em;
+  box-shadow: 2px -1px 5px white, -2px 1px 10px white;
+  background-color: transparent;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+.card-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 0.5em 0;
+}
+
+.profile-img,
+.tweet-card h2 {
+  display: inline-block;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+.tweet-card h2 {
+  font-size: 1.5em;
+  margin: 0 0 0 1em;
+}
+
+#search {
+  display: block;
+  border-radius: 2em;
+  width: 50%;
+  margin: 2.5em auto 1.5em;
+  padding: 0.25em 1em;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}

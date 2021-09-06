@@ -1,9 +1,9 @@
 import React from "react";
 import { Route } from "react-router";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
-import Random from "./components/Random";
-import Search from "./components/Search";
+import Home from "./pages/Home";
+import Random from "./pages/Random";
+import Search from "./pages/Search";
 
 import "./custom.css";
 

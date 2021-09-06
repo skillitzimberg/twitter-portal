@@ -4,7 +4,7 @@ import bird from "../images/bird.jpg";
 
 const Home = () => {
   return (
-    <div id="home">
+    <section id="home">
       <Card className="bg-dark text-white" id="card">
         <Card.Img src={bird} alt="Card image" />
         <Card.ImgOverlay>
@@ -18,7 +18,7 @@ const Home = () => {
           </Card.Text>
         </Card.ImgOverlay>
       </Card>
-    </div>
+    </section>
   );
 };
 
