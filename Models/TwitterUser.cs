@@ -6,10 +6,16 @@ namespace TwitterApp.Models
 {
     public class TwitterUser
     {
+        public TwitterUser(string username, string description)
+        {
+            this.Username = username;
+            this.Description = description;
+        }
         public string Id { get; set; }
         public string Username { get; set; }
 
         public string Name { get; set; }
+        public string Description { get; set; }
 
         [JsonPropertyName("url")]
 

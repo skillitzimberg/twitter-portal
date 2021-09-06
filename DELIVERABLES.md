@@ -62,7 +62,7 @@ The website will have three main pages:
 - ASP.NET / ASP.NET Core Web API
   - [What is an API (high-level explanation)?](https://www.youtube.com/watch?v=s7wmiS2mSXY)
   - What is ASP.NET (Plus Examples)?
-    - [Video Series](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy)
+    - [ASP.NET Core 101 Video Series](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oW8nviYduHq7bmKode-p8Wy)
   - [What is .NET Core Web API (building an API in C#)?](https://www.tutorialsteacher.com/webapi/what-is-web-api)
 - Twitter API
   - [API Documentation](https://developer.twitter.com/en/docs.html)

@@ -70,5 +70,32 @@ namespace TwitterApp.Services
                 return user;
             }
         }
+
+        public TwitterUser GetUserByUsername(string username)
+        {
+            using(var jsonFileReader = File.OpenText(UserJson))
+            {
+                var users = JsonSerializer.Deserialize<TwitterUser[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+                foreach (var user in users)
+                {
+                    if (user.Username == username)
+                    {
+                        user.Tweets = this.GetTweets();
+                        return user;
+                    }
+                }
+            }
+            return new TwitterUser(username, $"Twitter user with username {username} not found.");
+        }
+
+        public TwitterUser Search(string query)
+        {
+            var user = this.GetUserByUsername(query);
+            return user;
+        }
     }
 }
