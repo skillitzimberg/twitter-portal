@@ -50,8 +50,8 @@ p.home-card {
 
 .card-head {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0 0 0.5em 0;
 }
@@ -66,7 +66,7 @@ p.home-card {
 }
 
 .tweet-card h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 0 0 0 1em;
 }
 
@@ -79,4 +79,10 @@ p.home-card {
   background-color: transparent;
   color: white;
   text-align: center;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

@@ -2,22 +2,16 @@ import React from "react";
 import TweetCard from "../components/TweetCard";
 
 const TweetList = (props) => {
-  const { userData } = props;
+  const { userWithTweets } = props;
 
   const user = {
-    name: userData.name,
-    username: userData.username,
-    profileImg: userData.profile_image_url,
+    name: userWithTweets.name,
+    username: userWithTweets.username,
+    profileImg: userWithTweets.profile_image_url,
   };
 
-  let tweetCards = userData.tweets.map((tweet) => {
-    return (
-      <TweetCard
-        tweet={tweet.text}
-        user={user}
-        key={Math.random().toString()}
-      />
-    );
+  let tweetCards = userWithTweets.tweets.map((tweet) => {
+    return <TweetCard tweet={tweet} user={user} key={tweet.id.toString()} />;
   });
   return tweetCards;
 };

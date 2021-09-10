@@ -75,7 +75,7 @@ The vertical card carousel that changes the card size depending on its position 
 
 ## Test Cases
 
-- HOME:
+- HOME VIEW:
 
   1.  When a USER visits the HOME page:
       - Show a site-wide navigation menu
@@ -85,17 +85,17 @@ The vertical card carousel that changes the card size depending on its position 
   3.  When a USER clicks the link for the RANDOM page:
       - Navigate to the RANDOM view
 
-- SEARCH:
+- SEARCH VIEW:
 
   1.  When a USER navigates to the SEARCH page:
       - Offer a way for the USER to search for tweets by
         - username
-        - content
+        - content: stretch goal
   2.  When a USER enters a search
       - Request relevant searches from the Twitter API
       - Display 5 - 10 tweets from the response in cards
 
-- RANDOM:
+- RANDOM VIEW:
   1.  When a USER navigates to the RANDOM page:
       - Offer a way for the USER to get a random tweet from a pre-selected set of Twitter users
   2.  When the USER requests a random tweet:
@@ -119,10 +119,13 @@ The vertical card carousel that changes the card size depending on its position 
   1.  When a USER navigates to the SEARCH page:
       - Offer a way for the USER to search for tweets by
         - username
-        - content
-  2.  When a USER enters a search
-      - Request relevant searches from the Twitter API
-      - Display 5 - 10 tweets from the response in cards
+        - content (stretch goal)
+  2.  When a USER enters a search term (we are assuming it's a username)
+      - Send request to `https://api.twitter.com/2/users/by/username/:username`
+      - From the response, get the userid
+      - Send a request to `https://api.twitter.com/2/users/:id/tweets?expansions=author_id&user.fields=profile_image_url&tweet.fields=created_at,public_metrics,entities`
+      - Serialize response into TwitterResponse class
+      - Serialize TwitterResponse.Data to
 
 - RANDOM:
   1.  When a USER navigates to the RANDOM page:
@@ -143,10 +146,13 @@ The vertical card carousel that changes the card size depending on its position 
 Get user by username:
 
 - (simple) https://api.twitter.com/2/users/by/username/:username
-- (more data) https://api.twitter.com/2/users/by/username/:username?user.fields=created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,url,username,verified,withheld&expansions=pinned_tweet_id&tweet.fields=attachments,author_id,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,referenced_tweets,source,text,withheld
+- (more profile_image_url) https://api.twitter.com/2/users/by/username/:username?user.fields=profile_image_url;
+
   Get tweets by userId:
 
-- https://api.twitter.com/2/users/:id/tweets;
+- (simple) https://api.twitter.com/2/users/:id/tweets;
+- (with created_at, public_metrics) https://api.twitter.com/2/users/:id/tweets?tweet.fields=created_at,public_metrics;
+- (with author_id expansion) https://api.twitter.com/2/users/:id/tweets?expansions=author_id&user.fields=profile_image_url&tweet.fields=created_at,public_metrics,entities;
 
 ## Googled
 
