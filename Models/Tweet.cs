@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace TwitterApp.Models
@@ -11,9 +10,9 @@ namespace TwitterApp.Models
         }
         public string Id { get; set; }
         public string Text { get; set; }
-        public Dictionary<string, PublicMetrics> PublicMetrics { get;  set; }
+        [JsonPropertyName("public_metrics")]
+        public PublicMetrics PublicMetrics { get;  set; }
     }
-    
     public class PublicMetrics {
         [JsonPropertyName("retweet_count")]
         public int RetweetCount { get; set; }

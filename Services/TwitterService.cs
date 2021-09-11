@@ -44,12 +44,14 @@ namespace TwitterApp.Services
 
         public IEnumerable<TwitterUser> GetAll()
         {
-            var userDataJson = File.ReadAllText(UsersWithTweetsJson);
-            return JsonSerializer.Deserialize<TwitterUser[]>(userDataJson, 
-                new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
+            using(var jsonFileReader = File.OpenText(UsersWithTweetsJson))
+            {
+                return JsonSerializer.Deserialize<TwitterUser[]>(jsonFileReader.ReadToEnd(),
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+            }
         }
 
         public Tweet GetTweet(string id)
