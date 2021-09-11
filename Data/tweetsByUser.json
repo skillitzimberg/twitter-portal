@@ -1,42 +1,112 @@
 [
   {
+    "id": "1435625632436834311",
+    "created_at": "2021-09-08T15:26:38.000Z",
+    "public_metrics": {
+      "retweet_count": 334,
+      "reply_count": 234,
+      "like_count": 3949,
+      "quote_count": 43
+    },
+    "text": "The US wars in the Middle East since 9/11 have cost $6+ trillion dollars and led to 800,000+ deaths. Given especially the recent sudden withdrawal from Afghanistan, this is heartbreaking."
+  },
+  {
+    "id": "1434979309765206025",
+    "created_at": "2021-09-06T20:38:22.000Z",
+    "public_metrics": {
+      "retweet_count": 127,
+      "reply_count": 80,
+      "like_count": 1125,
+      "quote_count": 31
+    },
+    "text": "Here's my conversation with Jaron Lanier, founder of the field of virtual reality and outspoken critic of social media platforms as he argues in his book \"Ten Arguments for Deleting Your Social Media Accounts Right Now\". https://t.co/h9hixuVzbf https://t.co/FAW9ZBWlsR"
+  },
+  {
+    "id": "1434579310820610051",
+    "created_at": "2021-09-05T18:08:55.000Z",
+    "public_metrics": {
+      "retweet_count": 157,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
+    "text": "RT @IOHK_Charles: This is one of the best episodes of the @lexfridman podcast from one of the world's top virologists https://t.co/gVXpe98x…"
+  },
+  {
+    "id": "1434361487389253632",
+    "created_at": "2021-09-05T03:43:22.000Z",
+    "public_metrics": {
+      "retweet_count": 1250,
+      "reply_count": 914,
+      "like_count": 15557,
+      "quote_count": 204
+    },
+    "text": "More than 80% of the ocean is still unexplored."
+  },
+  {
+    "id": "1433907814779559946",
+    "created_at": "2021-09-03T21:40:38.000Z",
+    "public_metrics": {
+      "retweet_count": 87,
+      "reply_count": 36,
+      "like_count": 674,
+      "quote_count": 19
+    },
+    "text": "Here's my conversation with @rodneyabrooks, one of the greatest roboticists of all time, having co-founded iRobot, Rethink Robotics, Robust-AI, and before that serving as director of the MIT Computer Science and Artificial Intelligence Laboratory. https://t.co/iIzat1V4rF https://t.co/yC3ntXGp1W"
+  },
+  {
     "id": "1433854337059627021",
+    "created_at": "2021-09-03T18:08:08.000Z",
+    "public_metrics": {
+      "retweet_count": 114,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
     "text": "RT @hubermanlab: Brilliant, informative and important discussion between @lexfridman and @profvrr about viruses, and vaccines. They cover t…"
   },
   {
     "id": "1433633803063472128",
+    "created_at": "2021-09-03T03:31:48.000Z",
+    "public_metrics": {
+      "retweet_count": 470,
+      "reply_count": 506,
+      "like_count": 8528,
+      "quote_count": 66
+    },
     "text": "My brain told me to tweet this. I wonder what it will tell me to do next. I'm excited by all the possibilities."
   },
   {
     "id": "1433193004106387457",
+    "created_at": "2021-09-01T22:20:14.000Z",
+    "public_metrics": {
+      "retweet_count": 110,
+      "reply_count": 0,
+      "like_count": 0,
+      "quote_count": 0
+    },
     "text": "RT @profvrr: My three and one half hour conversation about viruses with @lexfridman was amazing - please check it out. Longer than an episo…"
   },
   {
     "id": "1433124582341361666",
+    "created_at": "2021-09-01T17:48:21.000Z",
+    "public_metrics": {
+      "retweet_count": 174,
+      "reply_count": 96,
+      "like_count": 1060,
+      "quote_count": 61
+    },
     "text": "Here's my conversation with Vincent Racaniello (@profvrr), a virologist and microbiologist at Columbia, co-host of This Week in Virology, and one of best educators of biology and science that I've ever spoken to. We talk all about viruses and vaccines. https://t.co/JjHX5NI6Ee https://t.co/szCvZAVirb"
   },
   {
     "id": "1432792995426938880",
+    "created_at": "2021-08-31T19:50:44.000Z",
+    "public_metrics": {
+      "retweet_count": 235,
+      "reply_count": 71,
+      "like_count": 2304,
+      "quote_count": 8
+    },
     "text": "Some tech podcasts I love:\n\nFor the storytelling:\nDarknet Diaries\nw/ @JackRhysider\n\nFor the friendship &amp; insights:\nAll-In\nw/ @Jason @chamath @DavidSacks @friedberg\n\nFor the AI wisdom:\nML Street Talk w/ @ykilcher @ecsquendor ++\nTWIML AI w/ @samcharrington\nRobot Brains w/ @pabbeel"
-  },
-  {
-    "id": "1432036337151004676",
-    "text": "Here's my conversation with Wojciech Zaremba (@woj_zaremba), co-founder of OpenAI and head of their efforts on language models (GPT-3), code generation, and previously, robotics. Wojciech is brilliant and is a great human being. I really enjoyed this chat. https://t.co/o15RKM6ao8 https://t.co/QOrAUzTQeC"
-  },
-  {
-    "id": "1431743770366730243",
-    "text": "Andrew Huberman (@hubermanlab) took his first jiu jitsu class w/ me at 10th Planet in Austin while visiting. As the picture shows, I think it went well. It's great to see a world-class scientist humbly take on a new challenge with a beginner's mind. Video: https://t.co/8QuLEdcO2b https://t.co/4F0Heykyqq"
-  },
-  {
-    "id": "1431727791033229316",
-    "text": "@elonmusk Humans are complicated. https://t.co/0C7B5kzgr9"
-  },
-  {
-    "id": "1431365616003387393",
-    "text": "Here's my conversation with Jed Buchwald, a historian and philosopher of science at Caltech. We focus our conversation on Isaac Newton, one of the most important and fascinating figures in human history. https://t.co/x60VWzGnQg https://t.co/qE3Q7EziaP"
-  },
-  {
-    "id": "1430286258136391684",
-    "text": "Education is about more than memorization. Learning &amp; practicing general principles of problem solving is more important than memorizing the techniques of how to solve specific problems. https://t.co/UsHsef7fjf"
   }
 ]

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using TwitterApp.Models;
 using TwitterApp.Services;
@@ -16,9 +17,9 @@ namespace TwitterApp.Controllers
 
         [Route("api/[controller]")]
         [HttpGet]
-        public TwitterUser Get()
+        public IEnumerable<TwitterUser> Get()
         {
-            return TwitterService.GetUser();
+            return TwitterService.GetAll();
         }
 
         [Route("api/[controller]/{id}")]

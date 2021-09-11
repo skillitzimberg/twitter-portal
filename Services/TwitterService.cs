@@ -14,9 +14,9 @@ namespace TwitterApp.Services
             this.WebHostEnvironment = webHostEnvironment;
         }
 
-        private string UserJson
+        private string UsersJson
         {
-            get { return Path.Combine(WebHostEnvironment.ContentRootPath, "data", "user.json"); }
+            get { return Path.Combine(WebHostEnvironment.ContentRootPath, "data", "users.json"); }
         }
 
         private string TweetsJson
@@ -24,16 +24,32 @@ namespace TwitterApp.Services
             get { return Path.Combine(WebHostEnvironment.ContentRootPath, "data", "tweetsByUser.json"); }
         }
 
+        private string UsersWithTweetsJson
+        {
+            get { return Path.Combine(WebHostEnvironment.ContentRootPath, "data", "usersWithTweets.json"); }
+        }
+
         public IEnumerable<Tweet> GetTweets()
         {
             using(var jsonFileReader = File.OpenText(TweetsJson))
             {
-                return JsonSerializer.Deserialize<Tweet[]>(jsonFileReader.ReadToEnd(),
+                var tweets = JsonSerializer.Deserialize<Tweet[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     });
+                return tweets;
             }
+        }
+
+        public IEnumerable<TwitterUser> GetAll()
+        {
+            var userDataJson = File.ReadAllText(UsersWithTweetsJson);
+            return JsonSerializer.Deserialize<TwitterUser[]>(userDataJson, 
+                new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
         }
 
         public Tweet GetTweet(string id)
@@ -56,24 +72,9 @@ namespace TwitterApp.Services
             return new Tweet(id, $"Tweet with ID {id} not found.");
         }
 
-        public TwitterUser GetUser()
-        {
-            using(var jsonFileReader = File.OpenText(UserJson))
-            {
-                var user = JsonSerializer.Deserialize<TwitterUser>(jsonFileReader.ReadToEnd(),
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    });
-
-                user.Tweets = this.GetTweets();
-                return user;
-            }
-        }
-
         public TwitterUser GetUserByUsername(string username)
         {
-            using(var jsonFileReader = File.OpenText(UserJson))
+            using(var jsonFileReader = File.OpenText(UsersWithTweetsJson))
             {
                 var users = JsonSerializer.Deserialize<TwitterUser[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions

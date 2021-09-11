@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace TwitterApp.Models
@@ -10,7 +11,7 @@ namespace TwitterApp.Models
         }
         public string Id { get; set; }
         public string Text { get; set; }
-        public PublicMetrics PublicMetrics { get;  set; }
+        public Dictionary<string, PublicMetrics> PublicMetrics { get;  set; }
     }
     
     public class PublicMetrics {
