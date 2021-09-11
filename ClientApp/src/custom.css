@@ -81,6 +81,10 @@ p.home-card {
   text-align: center;
 }
 
+#submit-search {
+  display: none;
+}
+
 .metrics {
   display: flex;
   flex-direction: row;

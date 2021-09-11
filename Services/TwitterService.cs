@@ -85,14 +85,14 @@ namespace TwitterApp.Services
                     });
                 foreach (var user in users)
                 {
-                    if (user.Username == username)
+                    if (user.Username.ToLower() == username.ToLower())
                     {
                         user.Tweets = this.GetTweets();
                         return user;
                     }
                 }
             }
-            return new TwitterUser(username, $"Twitter user with username {username} not found.");
+            return null;
         }
 
         public TwitterUser Search(string query)
