@@ -16,7 +16,7 @@ namespace TwitterApp.Controllers
 
         [Route("api/[controller]")]
         [HttpGet]
-        public TwitterUser Get(string query)
+        public TwitterResponse Get(string query)
         {
             return TwitterService.Search(query);
         }

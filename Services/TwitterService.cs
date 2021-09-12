@@ -1,6 +1,8 @@
-using System.Collections.Generic;
+using System;
 using System.IO;
+using System.Net;
 using System.Text.Json;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using TwitterApp.Models;
 
@@ -27,6 +29,11 @@ namespace TwitterApp.Services
         private string UsersWithTweetsJson
         {
             get { return Path.Combine(WebHostEnvironment.ContentRootPath, "data", "usersWithTweets.json"); }
+        }
+
+        private string APIKeys
+        {
+            get { return Path.Combine(WebHostEnvironment.ContentRootPath, "apiKey.json"); }
         }
 
         public IEnumerable<Tweet> GetTweets()
@@ -74,28 +81,39 @@ namespace TwitterApp.Services
             return new Tweet(id, $"Tweet with ID {id} not found.");
         }
 
-        public TwitterUser GetUserByUsername(string username)
+        public TwitterResponse GetUserByUsername(string username)
         {
-            using(var jsonFileReader = File.OpenText(UsersWithTweetsJson))
+            // Create a request for the URL.
+            WebRequest request = WebRequest.Create(
+              $"https://api.twitter.com/2/users/by/username/{username}?user.fields=profile_image_url,url,description");
+            
+            // Set Authorization Header for Bearer.
+            request.Headers.Add("Authorization", "Bearer " + "AAAAAAAAAAAAAAAAAAAAAMtHTQEAAAAAf19DJ0ubbwQvJ9AMTtr1E0e0yvY%3DqATB5G0u7pjSLSQtt5iITPlaMp4EZdZcO6BO27eqtvJBAexPby");
+
+            // Get the response.
+            WebResponse response = request.GetResponse();
+            // Display the status.
+            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+
+            // Get the stream containing content returned by the server.
+            // The using block ensures the stream is automatically closed.
+            using (Stream dataStream = response.GetResponseStream())
             {
-                var users = JsonSerializer.Deserialize<TwitterUser[]>(jsonFileReader.ReadToEnd(),
+                // Open the stream using a StreamReader for easy access.
+                StreamReader reader = new StreamReader(dataStream);
+                // Read the content.
+                string responseFromServer = reader.ReadToEnd();
+                // Display the content.
+                Console.WriteLine(responseFromServer);
+                return JsonSerializer.Deserialize<TwitterResponse>(responseFromServer,
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     });
-                foreach (var user in users)
-                {
-                    if (user.Username.ToLower() == username.ToLower())
-                    {
-                        user.Tweets = this.GetTweets();
-                        return user;
-                    }
-                }
             }
-            return null;
         }
 
-        public TwitterUser Search(string query)
+        public TwitterResponse Search(string query)
         {
             var user = this.GetUserByUsername(query);
             return user;
