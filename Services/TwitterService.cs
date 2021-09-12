@@ -39,7 +39,7 @@ namespace TwitterApp.Services
         public IEnumerable<Tweet> GetTweets(string id)
         {
             // Create a request
-            WebRequest request = WebRequest.Create($"https://api.twitter.com/2/users/{id}/tweets?tweet.fields=public_metrics");
+            WebRequest request = WebRequest.Create($"https://api.twitter.com/2/users/{id}/tweets?tweet.fields=created_at,public_metrics");
             // Set Headers for Bearer Token
             request.Headers.Add("Authorization", "Bearer " + "AAAAAAAAAAAAAAAAAAAAAMtHTQEAAAAAf19DJ0ubbwQvJ9AMTtr1E0e0yvY%3DqATB5G0u7pjSLSQtt5iITPlaMp4EZdZcO6BO27eqtvJBAexPby");
             // Get the response

@@ -9,6 +9,9 @@ namespace TwitterApp.Models
             this.Text = text;
         }
         public string Id { get; set; }
+        
+        [JsonPropertyName("created_at")]
+        public string CreatedAt { get; set; }
         public string Text { get; set; }
         [JsonPropertyName("public_metrics")]
         public PublicMetrics PublicMetrics { get;  set; }
