@@ -124,8 +124,8 @@ The vertical card carousel that changes the card size depending on its position 
       - Send request to `https://api.twitter.com/2/users/by/username/:username`
       - From the response, get the userid
       - Send a request to `https://api.twitter.com/2/users/:id/tweets?expansions=author_id&user.fields=profile_image_url&tweet.fields=created_at,public_metrics,entities`
-      - Serialize response into TwitterResponse class
-      - Serialize TwitterResponse.Data to
+      - Serialize response into UserWrapper class
+      - Serialize UserWrapper.Data to
 
 - RANDOM:
   1.  When a USER navigates to the RANDOM page:
