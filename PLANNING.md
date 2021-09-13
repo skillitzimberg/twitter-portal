@@ -125,14 +125,15 @@ The vertical card carousel that changes the card size depending on its position 
       - From the response, get the userid
       - Send a request to `https://api.twitter.com/2/users/:id/tweets?expansions=author_id&user.fields=profile_image_url&tweet.fields=created_at,public_metrics,entities`
       - Serialize response into UserWrapper class
-      - Serialize UserWrapper.Data to
+      - Serialize UserWrapper.Data to TweetUser class
 
 - RANDOM:
-  1.  When a USER navigates to the RANDOM page:
-      - Offer a way for the USER to get a random tweet from a pre-selected set of Twitter users
-  2.  When the USER requests a random tweet:
-      - request a tweet from the Twitter API
-      - display the response in a card
+  1.  When the RANDOM page loads:
+      - Make a request for a pre-selected set of Twitter users
+      - Display the user details in a list of cards
+  2.  When the USER clicks on a user's card:
+      - make a request for a random tweet from that user
+      - display the response in a tweet card
 
 ## Known unknowns
 

@@ -18,5 +18,11 @@ namespace TwitterApp.Models
         public IEnumerable<Tweet> Tweets { get; set; }
         public override string ToString() => JsonSerializer.Serialize<TweetListWrapper>(this);
     }
-    
+    public class UserListWrapper 
+    {
+        [JsonPropertyName("data")]
+
+        public IEnumerable<TwitterUser> Users { get; set; }
+        public override string ToString() => JsonSerializer.Serialize<UserListWrapper>(this);
+    }
 }

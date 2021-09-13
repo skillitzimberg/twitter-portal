@@ -21,7 +21,7 @@ const Search = () => {
   };
 
   return (
-    <section>
+    <section id="search-page">
       <form>
         <div>
           <input

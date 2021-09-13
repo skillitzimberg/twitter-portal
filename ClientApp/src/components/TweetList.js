@@ -13,7 +13,7 @@ const TweetList = (props) => {
   let tweetCards = userWithTweets.tweets.map((tweet) => {
     return <TweetCard tweet={tweet} user={user} key={tweet.id.toString()} />;
   });
-  return tweetCards;
+  return <ul id="tweet-list">{tweetCards}</ul>;
 };
 
 export default TweetList;

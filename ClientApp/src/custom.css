@@ -39,8 +39,19 @@ header {
 p.home-card {
   width: 70%;
 }
+
+#search-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tweet-list {
+  list-style: none;
+}
+
 .tweet-card {
-  width: 50%;
   margin: 0 auto 1.5em;
   box-shadow: 2px -1px 5px white, -2px 1px 10px white;
   background-color: transparent;
@@ -73,7 +84,6 @@ p.home-card {
 #search {
   display: block;
   border-radius: 2em;
-  width: 50%;
   margin: 2.5em auto 1.5em;
   padding: 0.25em 1em;
   background-color: transparent;
@@ -89,4 +99,8 @@ p.home-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.user-card {
+  width: 33%;
 }

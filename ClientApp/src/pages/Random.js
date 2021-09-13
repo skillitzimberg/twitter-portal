@@ -1,11 +1,22 @@
 import React from "react";
+import axios from "axios";
 import UserCard from "../components/userCard";
-import usersData from "../Data/users.json";
 
 const Random = () => {
+  const [favoriteUsers, setFavoriteUsers] = React.useState([]);
+
+  React.useEffect(() => {
+    (async () => {
+      const response = await await axios.get(
+        "https://localhost:5001/api/favorites"
+      );
+      setFavoriteUsers(response.data);
+    })();
+  }, []);
+
   const userCards = () => {
-    return usersData.map((user) => {
-      return <UserCard user={user} key={Math.random().toString()} />;
+    return favoriteUsers.map((user) => {
+      return <UserCard user={user} key={user.username} />;
     });
   };
   return <section>{userCards()}</section>;
