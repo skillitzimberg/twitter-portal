@@ -1,4 +1,6 @@
-* {
+*,
+ul,
+ol {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -101,6 +103,14 @@ p.home-card {
   justify-content: space-between;
 }
 
-.user-card {
-  width: 33%;
+#favorites-page {
+  display: flex;
+  flex-direction: row;
 }
+#favorites-page ul {
+  list-style: none;
+}
+
+/* .user-card {
+  width: 33%;
+} */

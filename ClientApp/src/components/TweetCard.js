@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 const TweetCard = (props) => {
   const { user, tweet } = props;
@@ -8,12 +7,8 @@ const TweetCard = (props) => {
     day: "numeric",
   });
 
-  const getRandomTweet = async () => {
-    const tweets = await axios.get(`https://localhost:5001/api/tweets`);
-  };
-
   return (
-    <li className="tweet-card bg-dark text-white">
+    <>
       <div className="card-head">
         <img
           className="profile-img"
@@ -31,7 +26,7 @@ const TweetCard = (props) => {
         <span>{tweet.public_metrics.retweet_count}</span>
         <span>{tweet.public_metrics.quote_count}</span>
       </div>
-    </li>
+    </>
   );
 };
 
