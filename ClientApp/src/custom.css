@@ -4,6 +4,7 @@ ol {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* width: 100%; */
 }
 
 html {
@@ -27,10 +28,13 @@ header {
   box-shadow: -2px 2px 10px white;
 }
 
+.card-shadow {
+  box-shadow: 2px -1px 5px white, -2px 1px 10px white;
+}
+
 #card {
   width: 50%;
   margin: 5em auto;
-  box-shadow: 2px -1px 5px white, -2px 1px 10px white;
   background-color: transparent;
 }
 
@@ -54,8 +58,10 @@ p.home-card {
 }
 
 .tweet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto 1.5em;
-  box-shadow: 2px -1px 5px white, -2px 1px 10px white;
   background-color: transparent;
   border-radius: 0.5em;
   padding: 1em;
@@ -63,7 +69,7 @@ p.home-card {
 
 .card-head {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   margin: 0 0 0.5em 0;
@@ -101,16 +107,64 @@ p.home-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 50%;
 }
 
 #favorites-page {
+  margin: 1.5em 0 0 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 #favorites-page ul {
   list-style: none;
+  width: 90%;
+  margin: 1em auto;
 }
 
-/* .user-card {
-  width: 33%;
-} */
+.user-card {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em 0 0 0;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.random-tweet-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto 1.5em;
+  width: 90%;
+  padding: 0 1em;
+}
+
+.random-tweet-card-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.random-tweet-card span {
+  text-align: center;
+}
+
+.random-tweet-card button {
+  border-radius: 1em;
+  background-color: transparent;
+  color: white;
+  margin: 1em 0 0 0;
+  width: 50%;
+}
+.tweet-text {
+  text-align: center;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

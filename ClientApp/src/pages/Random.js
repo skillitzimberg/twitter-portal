@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import UserCard from "../components/UserCard";
-import TweetCard from "../components/TweetCard";
+import RandomTweetCard from "../components/RandomTweetCard";
 
 const Random = () => {
   const [favoriteUsers, setFavoriteUsers] = React.useState([]);
@@ -27,12 +27,23 @@ const Random = () => {
     for (let user of favoriteUsers) {
       if (user.id === id) clickedUser = user;
     }
+    console.log(clickedUser);
     setSelectedUser(clickedUser);
   };
 
   const handleSelection = (id) => {
     getRandomTweet(id);
     getUserData(id);
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const closeTweet = () => {
+    setRandomTweet();
+    setSelectedUser();
   };
 
   const userCards = () => {
@@ -48,14 +59,16 @@ const Random = () => {
   };
 
   return (
-    <div id="favorites-page">
+    <section id="favorites-page">
+      {randomTweet && selectedUser ? (
+        <RandomTweetCard
+          tweet={randomTweet}
+          user={selectedUser}
+          close={closeTweet}
+        />
+      ) : null}
       <ul>{userCards()}</ul>
-      <section>
-        {randomTweet && selectedUser ? (
-          <TweetCard tweet={randomTweet} user={selectedUser} />
-        ) : null}
-      </section>
-    </div>
+    </section>
   );
 };
 export default Random;

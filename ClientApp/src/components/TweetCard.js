@@ -2,6 +2,7 @@ import React from "react";
 
 const TweetCard = (props) => {
   const { user, tweet } = props;
+  console.log(user);
   const date = new Date(tweet.created_at).toLocaleString("en-EN", {
     month: "short",
     day: "numeric",

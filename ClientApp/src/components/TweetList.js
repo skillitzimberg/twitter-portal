@@ -13,8 +13,8 @@ const TweetList = (props) => {
 
   let tweetCards = userWithTweets.tweets.map((tweet) => {
     return (
-      <li className="tweet-card bg-dark text-white">
-        <TweetCard tweet={tweet} user={user} key={tweet.id} />
+      <li className="tweet-card bg-dark text-white card-shadow" key={tweet.id}>
+        <TweetCard tweet={tweet} user={user} />
       </li>
     );
   });
