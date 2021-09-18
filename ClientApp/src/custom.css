@@ -22,6 +22,7 @@ body {
 #layout,
 #home {
   height: 100%;
+  background-color: #000;
 }
 
 header {
@@ -32,25 +33,27 @@ header {
   box-shadow: 2px -1px 5px white, -2px 1px 10px white;
 }
 
-#card {
-  width: 50%;
+#home-card {
+  width: 90%;
+  height: 15em;
   margin: 5em auto;
-  background-color: transparent;
+  background-color: #000;
 }
 
 .card-img-overlay {
   padding-top: 3em;
 }
 
-p.home-card {
+/* p#home-card {
   width: 70%;
-}
+} */
 
 #search-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1.5em 0 0 0;
 }
 
 #tweet-list {
@@ -75,6 +78,10 @@ p.home-card {
   margin: 0 0 0.5em 0;
 }
 
+.user-card .card-head {
+  width: 50%;
+}
+
 .profile-img,
 .tweet-card h2 {
   display: inline-block;
@@ -92,7 +99,7 @@ p.home-card {
 #search {
   display: block;
   border-radius: 2em;
-  margin: 2.5em auto 1.5em;
+  margin: 1em auto 1.5em;
   padding: 0.25em 1em;
   background-color: transparent;
   color: white;
@@ -111,11 +118,12 @@ p.home-card {
 }
 
 #favorites-page {
-  margin: 1.5em 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+#search-page ul,
 #favorites-page ul {
   list-style: none;
   width: 90%;
@@ -129,6 +137,7 @@ p.home-card {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+  padding: 1em;
 }
 
 .random-tweet-card {

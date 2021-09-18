@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace TwitterApp.Models
@@ -15,7 +16,10 @@ namespace TwitterApp.Models
         public string Text { get; set; }
         [JsonPropertyName("public_metrics")]
         public PublicMetrics PublicMetrics { get;  set; }
+        [JsonPropertyName("attachments")]
+        public Attachments Attachments { get;  set; }
     }
+
     public class PublicMetrics {
         [JsonPropertyName("retweet_count")]
         public int RetweetCount { get; set; }
@@ -25,5 +29,12 @@ namespace TwitterApp.Models
         public int LikeCount { get; set; }
         [JsonPropertyName("quote_count")]
         public int QuoteCount { get; set; }
+    }
+
+    public class Attachments {
+        [JsonPropertyName("media_keys")]
+        public IEnumerable<string> MediaKeys { get; set; }
+        [JsonPropertyName("media")]
+        public List<Media> Media { get; set; }
     }
 }

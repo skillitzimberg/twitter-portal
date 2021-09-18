@@ -1,4 +1,5 @@
 import React from "react";
+import Metrics from "./Metrics";
 
 const TweetCard = (props) => {
   const { user, tweet } = props;
@@ -21,12 +22,7 @@ const TweetCard = (props) => {
         <h2>{date}</h2>
       </div>
       <p className="tweet-text">{tweet.text}</p>
-      <div className="metrics">
-        <span>{tweet.public_metrics.like_count}</span>
-        <span>{tweet.public_metrics.reply_count}</span>
-        <span>{tweet.public_metrics.retweet_count}</span>
-        <span>{tweet.public_metrics.quote_count}</span>
-      </div>
+      <Metrics publicMetrics={tweet.public_metrics} />
     </>
   );
 };

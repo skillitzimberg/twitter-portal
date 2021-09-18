@@ -14,7 +14,16 @@ namespace TwitterApp.Models
     {
         [JsonPropertyName("data")]
         public IEnumerable<Tweet> Tweets { get; set; }
+
+        [JsonPropertyName("includes")]
+        public Includes Includes { get; set; }
+
         public override string ToString() => JsonSerializer.Serialize<TweetListWrapper>(this);
+    }
+    public class Includes 
+    {
+        [JsonPropertyName("media")]
+        public IEnumerable<Media> Media { get; set; }
     }
     public class UserListWrapper 
     {
