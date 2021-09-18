@@ -35,6 +35,6 @@ namespace TwitterApp.Models
         [JsonPropertyName("media_keys")]
         public IEnumerable<string> MediaKeys { get; set; }
         [JsonPropertyName("media")]
-        public List<Media> Media { get; set; }
+        public List<Media> Media { get; set; } = new List<Media>();
     }
 }

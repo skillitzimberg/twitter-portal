@@ -81,14 +81,16 @@ namespace TwitterApp.Services
                     {
                         foreach (var mediaKey in tweet.Attachments.MediaKeys)
                         {
-                            foreach(var media in tweetListWrapper.Includes.Media)
+                            if (mediaKey != null) 
                             {
-                                if (media != null)
+                                foreach(var media in tweetListWrapper.Includes.Media)
                                 {
-                                    if (media.MediaKey == mediaKey)
+                                    if (media != null)
                                     {
-                                        System.Console.WriteLine("media.Url");
-                                        tweet.Attachments.Media.Add(new Media(media.MediaKey, media.Type, media.Width, media.Height, media.Url));
+                                        if (media.MediaKey == mediaKey)
+                                        {
+                                            tweet.Attachments.Media.Add(new Media(media.MediaKey, media.Type, media.Width, media.Height, media.Url));
+                                        }
                                     }
                                 }
                             }
