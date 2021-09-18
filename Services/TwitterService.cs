@@ -88,7 +88,7 @@ namespace TwitterApp.Services
                                     if (media.MediaKey == mediaKey)
                                     {
                                         System.Console.WriteLine("media.Url");
-                                        // tweet.Attachments.Media.Add(new Media(media));
+                                        tweet.Attachments.Media.Add(new Media(media.MediaKey, media.Type, media.Width, media.Height, media.Url));
                                     }
                                 }
                             }

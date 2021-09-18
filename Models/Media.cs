@@ -4,13 +4,13 @@ namespace TwitterApp.Models
 {
     public class Media 
     {
-        public Media(Media media)
+        public Media(string mediaKey, string type, int width, int height, string url)
         {
-            this.MediaKey = media.MediaKey;
-            this.Type = media.Type;
-            this.Url = media.Url;
-            this.Width = media.Width;
-            this.Height = media.Height;
+            this.MediaKey = mediaKey;
+            this.Type = type;
+            this.Url = url;
+            this.Width = width;
+            this.Height = height;
         }
         [JsonPropertyName("media_key")]
         public string MediaKey { get; set; }
