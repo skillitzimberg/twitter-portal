@@ -32,14 +32,11 @@ const Search = () => {
           </button>
         </div>
       </form>
-      {
-        (console.log(userWithTweets),
-        userWithTweets ? (
-          <TweetList userWithTweets={userWithTweets} />
-        ) : (
-          <div>{message}</div>
-        ))
-      }
+      {userWithTweets ? (
+        <TweetList userWithTweets={userWithTweets} />
+      ) : (
+        <div>{message}</div>
+      )}
     </section>
   );
 };

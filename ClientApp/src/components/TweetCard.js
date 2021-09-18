@@ -1,9 +1,9 @@
 import React from "react";
+import MediaCard from "./MediaCard";
 import Metrics from "./Metrics";
 
 const TweetCard = (props) => {
   const { user, tweet } = props;
-  console.log(user);
   const date = new Date(tweet.created_at).toLocaleString("en-EN", {
     month: "short",
     day: "numeric",
@@ -22,6 +22,7 @@ const TweetCard = (props) => {
         <h2>{date}</h2>
       </div>
       <p className="tweet-text">{tweet.text}</p>
+      {tweet.attachments ? <MediaCard media={tweet.attachments.media} /> : null}
       <Metrics publicMetrics={tweet.public_metrics} />
     </>
   );

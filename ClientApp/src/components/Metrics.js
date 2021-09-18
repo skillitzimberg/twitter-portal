@@ -7,7 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Metrics = (props) => {
-  console.log(props.publicMetrics);
   const { reply_count, like_count, retweet_count } = props.publicMetrics;
   return (
     <div className="metrics">

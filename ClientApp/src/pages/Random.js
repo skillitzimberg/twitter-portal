@@ -15,25 +15,26 @@ const Random = () => {
     })();
   }, []);
 
-  const getRandomTweet = async (id) => {
-    const response = await axios.get(`https://localhost:5001/api/tweets/${id}`);
+  const getRandomTweet = async (userId) => {
+    const response = await axios.get(
+      `https://localhost:5001/api/tweets/${userId}`
+    );
     const tweet =
       response.data[Math.floor(Math.random() * response.data.length)];
     setRandomTweet(tweet);
   };
 
-  const getUserData = (id) => {
+  const getUserData = (userId) => {
     let clickedUser;
     for (let user of favoriteUsers) {
-      if (user.id === id) clickedUser = user;
+      if (user.id === userId) clickedUser = user;
     }
-    console.log(clickedUser);
     setSelectedUser(clickedUser);
   };
 
-  const handleSelection = (id) => {
-    getRandomTweet(id);
-    getUserData(id);
+  const handleSelection = (userId) => {
+    getRandomTweet(userId);
+    getUserData(userId);
     window.scroll({
       top: 0,
       left: 0,

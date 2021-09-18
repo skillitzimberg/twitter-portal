@@ -1,4 +1,5 @@
 import React from "react";
+import MediaCard from "./MediaCard";
 import Metrics from "./Metrics";
 
 const RandomTweetCard = (props) => {
@@ -7,10 +8,9 @@ const RandomTweetCard = (props) => {
     month: "short",
     day: "numeric",
   });
-
   return (
     <aside className="random-tweet-card">
-      <div className="random-tweet-card-head">
+      <div className="card-head">
         <img
           className="profile-img"
           src={user.profile_image_url}
@@ -20,6 +20,7 @@ const RandomTweetCard = (props) => {
         <h2>{date}</h2>
       </div>
       <p className="tweet-text">{tweet.text}</p>
+      {tweet.attachments ? <MediaCard media={tweet.attachments.media} /> : null}
       <Metrics publicMetrics={tweet.public_metrics} />
       <button id="close" onClick={close}>
         Close

@@ -52,10 +52,10 @@ namespace TwitterApp.Services
                 return user;
             }
         }
-        public IEnumerable<Tweet> GetTweets(string id)
+        public IEnumerable<Tweet> GetTweets(string userId)
         {
             // Create a request
-            WebRequest request = WebRequest.Create($"https://api.twitter.com/2/users/{id}/tweets?tweet.fields=created_at,public_metrics&expansions=attachments.media_keys&media.fields=duration_ms,height,media_key,preview_image_url,public_metrics,type,url,width,alt_text");
+            WebRequest request = WebRequest.Create($"https://api.twitter.com/2/users/{userId}/tweets?tweet.fields=created_at,public_metrics&expansions=attachments.media_keys&media.fields=duration_ms,height,media_key,preview_image_url,public_metrics,type,url,width,alt_text");
             // Set Headers for Bearer Token
             request.Headers.Add("Authorization", "Bearer " + "AAAAAAAAAAAAAAAAAAAAAMtHTQEAAAAAf19DJ0ubbwQvJ9AMTtr1E0e0yvY%3DqATB5G0u7pjSLSQtt5iITPlaMp4EZdZcO6BO27eqtvJBAexPby");
             // Get the response
@@ -126,7 +126,7 @@ namespace TwitterApp.Services
                     {
                         PropertyNameCaseInsensitive = true
                     });
-                System.Console.WriteLine(deserializedData);
+                
                 // Deserialize the response into a List of Users
                 return JsonSerializer.Deserialize<UserListWrapper>(responseData,
                     new JsonSerializerOptions
