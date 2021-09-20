@@ -36,7 +36,7 @@ jobs:
       - name: cd to ClientApp
         run: |
           cd ClientApp
-          pwd
+          ls
       - name: npm install, build, and test
         run: |
           # Build and test the project, then
