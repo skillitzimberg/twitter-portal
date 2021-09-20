@@ -34,7 +34,9 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: cd to ClientApp
-        run: cd ClientApp
+        run: |
+          cd ClientApp
+          pwd
       - name: npm install, build, and test
         run: |
           # Build and test the project, then
