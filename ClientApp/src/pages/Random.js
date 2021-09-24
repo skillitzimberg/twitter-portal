@@ -3,21 +3,22 @@ import axios from "axios";
 import UserCard from "../components/UserCard";
 import RandomTweetCard from "../components/RandomTweetCard";
 
-const Random = () => {
-  const [favoriteUsers, setFavoriteUsers] = React.useState([]);
+const Random = (props) => {
+    const { apiUrl } = props;
+    const [favoriteUsers, setFavoriteUsers] = React.useState([]);
   const [selectedUser, setSelectedUser] = React.useState(null);
-  const [randomTweet, setRandomTweet] = React.useState(null);
+    const [randomTweet, setRandomTweet] = React.useState(null);
 
   React.useEffect(() => {
-    (async () => {
-      const response = await axios.get("https://localhost:5001/api/favorites");
+      (async () => {
+          const response = await axios.get(`${apiUrl}/favorites`);
       setFavoriteUsers(response.data);
-    })();
-  }, []);
+      })();
+  }, [apiUrl]);
 
   const getRandomTweet = async (userId) => {
     const response = await axios.get(
-      `https://localhost:5001/api/tweets/${userId}`
+        `${apiUrl}/tweets/${userId}`
     );
     const tweet =
       response.data[Math.floor(Math.random() * response.data.length)];

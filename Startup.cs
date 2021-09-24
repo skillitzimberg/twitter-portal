@@ -22,6 +22,7 @@ namespace TwitterApp
         {
             services.AddControllers();
             services.AddTransient<TwitterService>();
+            services.AddCors();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -49,6 +50,7 @@ namespace TwitterApp
             app.UseSpaStaticFiles();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseEndpoints(endpoints =>
             {

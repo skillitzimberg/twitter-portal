@@ -4,7 +4,6 @@ ol {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* width: 100%; */
 }
 
 html {
@@ -22,11 +21,19 @@ body {
 #layout,
 #home {
   height: 100%;
-  background-color: #000;
+  background-color: black;
 }
 
 header {
   box-shadow: -2px 2px 10px white;
+}
+
+.navbar {
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  margin: 0 0 0 0.5em;
 }
 
 .card-shadow {
@@ -34,19 +41,19 @@ header {
 }
 
 #home-card {
+  background-image: url("./images/bird.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 90%;
-  height: 15em;
-  margin: 5em auto;
-  background-color: #000;
+  height: 20em;
+  margin: 1.5em auto;
+  padding: 1.5em;
+  background-color: black;
 }
 
 .card-img-overlay {
   padding-top: 3em;
 }
-
-/* p#home-card {
-  width: 70%;
-} */
 
 #search-page {
   display: flex;
@@ -201,5 +208,12 @@ div.card-head > h2 {
     max-width: 50%;
     max-height: 50%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 530px) {
+  #home-card {
+    background-size: cover;
+    height: 90%;
   }
 }

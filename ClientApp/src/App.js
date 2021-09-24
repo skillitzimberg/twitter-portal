@@ -8,11 +8,16 @@ import Search from "./pages/Search";
 import "./custom.css";
 
 const App = () => {
+    const rootURL = window.location.origin
   return (
     <Layout>
       <Route exact path="/" component={Home} />
-      <Route path="/search" component={Search} />
-      <Route path="/random" component={Random} />
+          <Route path="/search">
+              <Search apiUrl={`${rootURL}/api`} />
+          </Route>
+          <Route path="/random">
+              <Random apiUrl={`${rootURL}/api`} />
+          </Route>
     </Layout>
   );
 };
