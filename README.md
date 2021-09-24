@@ -2,13 +2,13 @@
 
 ## A Study in Consuming Twitter‘s API's.
 
-[View Live on Azure](/).
+[View Live on Azure](https://twitterportal.azurewebsites.net/).
 
 ![](./twitter.png)
 
 ## Summary
 
-This the seventh app on my roadmap part of the Software Development Mastermind program. This a reintroduction to .NET Core and C# for me.
+This the seventh app on my roadmap part of the Software Development Mastermind program. This a reintroduction to .NET Core and C# for me. I appreciate how easy .NET makes it to set up a web app & API. The most difficult part of the project was understanding Twitter's v2 API.
 
 The expectations for the project are described in [DELIVERABLES](./DELIVERABLES.md).
 
